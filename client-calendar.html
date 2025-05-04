@@ -167,13 +167,20 @@
         dateEl.textContent = date.getDate();
         dayEl.appendChild(dateEl);
 
-        ["AM", "PM"].forEach((slot) => {
+        // Fix here: Replace "morning" and "evening" with the correct lowercase keys
+        const availabilityForDay = availability[getKey(date)] || {};
+        
+        // Using "morning" and "evening" from JSON keys
+        ["morning", "evening"].forEach((slot, index) => {
           const slotEl = document.createElement("div");
           slotEl.className = "slot";
-          const key = getKey(date);
-          const isAvailable = availability[key] && availability[key][slot] === true;
+          
+          // Check availability for "morning" and "evening", but display "AM" and "PM"
+          const isAvailable = availabilityForDay[slot] === true;
           slotEl.classList.add(isAvailable ? "available" : "unavailable");
-          slotEl.textContent = slot;
+          
+          // Use "AM" for "morning" and "PM" for "evening"
+          slotEl.textContent = index === 0 ? "AM" : "PM";
           dayEl.appendChild(slotEl);
         });
 
