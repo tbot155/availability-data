@@ -127,69 +127,77 @@
       renderCalendar();
     }
 
-    async function renderCalendar() {
-      const availability = await fetchAvailability();
-      const year = currentDate.getFullYear();
-      const month = currentDate.getMonth();
+   async function renderCalendar() {
+  const availability = await fetchAvailability();
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();
 
-      const firstDay = new Date(year, month, 1);
-      const startDay = new Date(firstDay);
-      startDay.setDate(firstDay.getDate() - firstDay.getDay());
+  const firstDay = new Date(year, month, 1);
+  const startDay = new Date(firstDay);
+  startDay.setDate(firstDay.getDate() - firstDay.getDay());
 
-      const lastDay = new Date(year, month + 1, 0);
-      const endDay = new Date(lastDay);
-      endDay.setDate(lastDay.getDate() + (6 - lastDay.getDay()));
+  const lastDay = new Date(year, month + 1, 0);
+  const endDay = new Date(lastDay);
+  endDay.setDate(lastDay.getDate() + (6 - lastDay.getDay()));
 
-      monthYearEl.textContent = firstDay.toLocaleDateString("default", {
-        month: "long",
-        year: "numeric",
-      });
+  monthYearEl.textContent = firstDay.toLocaleDateString("default", {
+    month: "long",
+    year: "numeric",
+  });
 
-      calendarEl.innerHTML = "";
+  calendarEl.innerHTML = "";
 
-      dayLabels.forEach((label) => {
-        const labelEl = document.createElement("div");
-        labelEl.textContent = label;
-        labelEl.className = "day-label";
-        calendarEl.appendChild(labelEl);
-      });
+  dayLabels.forEach((label) => {
+    const labelEl = document.createElement("div");
+    labelEl.textContent = label;
+    labelEl.className = "day-label";
+    calendarEl.appendChild(labelEl);
+  });
 
-      let date = new Date(startDay);
-      while (date <= endDay) {
-        const dayEl = document.createElement("div");
-        dayEl.className = "day";
-        if (date.getMonth() !== month) {
-          dayEl.classList.add("outside-month");
-        }
+  let date = new Date(startDay);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0); // Normalize to midnight
 
-        const dateEl = document.createElement("div");
-        dateEl.className = "date";
-        dateEl.textContent = date.getDate();
-        dayEl.appendChild(dateEl);
+  while (date <= endDay) {
+    const dayEl = document.createElement("div");
+    dayEl.className = "day";
 
-        // Fix here: Replace "morning" and "evening" with the correct lowercase keys
-        const availabilityForDay = availability[getKey(date)] || {};
-        
-        // Using "morning" and "evening" from JSON keys
-        ["morning", "evening"].forEach((slot, index) => {
-          const slotEl = document.createElement("div");
-          slotEl.className = "slot";
-          
-          // Check availability for "morning" and "evening", but display "AM" and "PM"
-          const isAvailable = availabilityForDay[slot] === true;
-          slotEl.classList.add(isAvailable ? "available" : "unavailable");
-          
-          // Use "AM" for "morning" and "PM" for "evening"
-          slotEl.textContent = index === 0 ? "AM" : "PM";
-          dayEl.appendChild(slotEl);
-        });
+    const isOutsideMonth = date.getMonth() !== month;
+    const isPast = date < today;
 
-        calendarEl.appendChild(dayEl);
-        date.setDate(date.getDate() + 1);
-      }
+    if (isOutsideMonth || isPast) {
+      dayEl.classList.add("outside-month");
     }
 
-    renderCalendar();
+    const dateEl = document.createElement("div");
+    dateEl.className = "date";
+    dateEl.textContent = date.getDate();
+    dayEl.appendChild(dateEl);
+
+    const availabilityForDay = availability[getKey(date)] || {};
+
+    ["morning", "evening"].forEach((slot, index) => {
+      const slotEl = document.createElement("div");
+      slotEl.className = "slot";
+
+      if (isPast) {
+        slotEl.classList.add("unavailable");
+      } else {
+        const isAvailable = availabilityForDay[slot] === true;
+        slotEl.classList.add(isAvailable ? "available" : "unavailable");
+      }
+
+      slotEl.textContent = index === 0 ? "AM" : "PM";
+      dayEl.appendChild(slotEl);
+    });
+
+    calendarEl.appendChild(dayEl);
+    date.setDate(date.getDate() + 1);
+  }
+}
+
+renderCalendar();
+
   </script>
 </body>
 </html>
