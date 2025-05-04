@@ -3,194 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Availability</title>
+  <title>Availability Calendar</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      font-family: sans-serif;
-      box-sizing: border-box;
-      overflow-x: hidden;
       background: #fff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     h1 {
       text-align: center;
-      margin-top: 20px;
+      margin: 1rem 0 0.5rem;
+      font-size: 1.5rem;
     }
 
-    .navigation {
+    #controls {
       text-align: center;
-      margin: 10px 0;
+      margin-bottom: 1rem;
     }
 
-    .calendar {
+    button {
+      margin: 0 0.5rem;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    #calendar {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
+      gap: 2px;
       width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 10px;
-      gap: 4px;
-      box-sizing: border-box;
+      max-width: 420px;
+      padding: 0.5rem;
     }
 
-    .day {
-      background: #f9f9f9;
-      border: 1px solid #ccc;
-      min-height: 100px;
-      padding: 4px;
-      box-sizing: border-box;
+    .day-label {
       text-align: center;
-    }
-
-    .day-header {
+      font-size: 0.75rem;
       font-weight: bold;
-      text-align: center;
-      background: #eaeaea;
       padding: 4px 0;
     }
 
-    .slot {
-      margin-top: 4px;
-      padding: 4px;
+    .day {
+      background: #f0f0f0;
       border-radius: 4px;
-      font-size: 14px;
-      color: #fff;
+      padding: 2px;
+      text-align: center;
+      font-size: 0.7rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .outside-month {
+      background-color: #bbb !important;
+      color: #777;
+    }
+
+    .date {
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+
+    .slot {
+      margin: 1px 0;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-size: 0.6rem;
+      color: white;
+      width: 80%;
     }
 
     .available {
-      background-color: #4CAF50;
+      background-color: #4caf50;
     }
 
     .unavailable {
-      background-color: #888888;
+      background-color: #666;
     }
 
-    .other-month {
-      background-color: #555555 !important;
-      color: #ccc;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 18px;
-      }
-
-      .calendar {
-        font-size: 12px;
-        gap: 2px;
-      }
-
-      .day {
-        min-height: 80px;
-        padding: 2px;
-      }
-
-      .slot {
-        font-size: 11px;
-        padding: 3px;
-      }
-
-      .navigation button {
-        font-size: 14px;
+    @media (max-width: 480px) {
+      #calendar {
+        max-width: 100%;
+        gap: 1px;
       }
     }
   </style>
 </head>
 <body>
   <h1>Availability</h1>
-  <div class="navigation">
-    <button onclick="changeMonth(-1)">Prev</button>
-    <span id="month-year"></span>
-    <button onclick="changeMonth(1)">Next</button>
+  <div id="controls">
+    <button onclick="changeMonth(-1)">&lt; Prev</button>
+    <span id="monthYear"></span>
+    <button onclick="changeMonth(1)">Next &gt;</button>
   </div>
-  <div id="calendar" class="calendar"></div>
+  <div id="calendar"></div>
 
   <script>
-    const calendarEl = document.getElementById('calendar');
-    const monthYearEl = document.getElementById('month-year');
+    const calendarEl = document.getElementById("calendar");
+    const monthYearEl = document.getElementById("monthYear");
+
+    const dayLabels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
     let currentDate = new Date();
 
-    let availabilityData = {};
-
-    async function loadJSON() {
-      try {
-        const response = await fetch('https://raw.githubusercontent.com/tbot155/availability-data/main/availability.json');
-        availabilityData = await response.json();
-        renderCalendar();
-      } catch (error) {
-        console.error('Failed to fetch availability data:', error);
-      }
+    async function fetchAvailability() {
+      const res = await fetch("https://raw.githubusercontent.com/tbot155/availability-data/main/availability.json");
+      return await res.json();
     }
 
-    function renderCalendar() {
-      calendarEl.innerHTML = '';
-
-      const year = currentDate.getFullYear();
-      const month = currentDate.getMonth();
-
-      const start = new Date(year, month, 1);
-      const end = new Date(year, month + 1, 0);
-
-      // Calculate range to show full weeks
-      const startDay = start.getDay(); // Sunday = 0
-      const daysInMonth = end.getDate();
-
-      const firstDateShown = new Date(start);
-      firstDateShown.setDate(start.getDate() - startDay);
-
-      const lastDateShown = new Date(end);
-      lastDateShown.setDate(end.getDate() + (6 - end.getDay()));
-
-      // Add headers
-      const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-      dayNames.forEach(day => {
-        const header = document.createElement('div');
-        header.className = 'day-header';
-        header.textContent = day;
-        calendarEl.appendChild(header);
-      });
-
-      let date = new Date(firstDateShown);
-
-      while (date <= lastDateShown) {
-        const dayEl = document.createElement('div');
-        dayEl.className = 'day';
-
-        const dateStr = date.toISOString().split('T')[0];
-        const monthStr = (month + 1).toString().padStart(2, '0');
-        const currentMonthStr = `${year}-${monthStr}`;
-
-        if (!date.toISOString().startsWith(currentMonthStr)) {
-          dayEl.classList.add('other-month');
-        }
-
-        const dayNumber = document.createElement('div');
-        dayNumber.textContent = date.getDate();
-        dayEl.appendChild(dayNumber);
-
-        ['morning', 'evening'].forEach(slot => {
-          const slotEl = document.createElement('div');
-          slotEl.classList.add('slot');
-
-          if (availabilityData[dateStr] && availabilityData[dateStr][slot]) {
-            slotEl.classList.add('available');
-          } else {
-            slotEl.classList.add('unavailable');
-          }
-
-          slotEl.textContent = slot.charAt(0).toUpperCase() + slot.slice(1);
-          dayEl.appendChild(slotEl);
-        });
-
-        calendarEl.appendChild(dayEl);
-        date.setDate(date.getDate() + 1);
-      }
-
-      const options = { month: 'long', year: 'numeric' };
-      monthYearEl.textContent = currentDate.toLocaleDateString(undefined, options);
+    function getKey(date) {
+      return date.toISOString().split("T")[0];
     }
 
     function changeMonth(offset) {
@@ -198,7 +127,62 @@
       renderCalendar();
     }
 
-    loadJSON();
+    async function renderCalendar() {
+      const availability = await fetchAvailability();
+      const year = currentDate.getFullYear();
+      const month = currentDate.getMonth();
+
+      const firstDay = new Date(year, month, 1);
+      const startDay = new Date(firstDay);
+      startDay.setDate(firstDay.getDate() - firstDay.getDay());
+
+      const lastDay = new Date(year, month + 1, 0);
+      const endDay = new Date(lastDay);
+      endDay.setDate(lastDay.getDate() + (6 - lastDay.getDay()));
+
+      monthYearEl.textContent = firstDay.toLocaleDateString("default", {
+        month: "long",
+        year: "numeric",
+      });
+
+      calendarEl.innerHTML = "";
+
+      dayLabels.forEach((label) => {
+        const labelEl = document.createElement("div");
+        labelEl.textContent = label;
+        labelEl.className = "day-label";
+        calendarEl.appendChild(labelEl);
+      });
+
+      let date = new Date(startDay);
+      while (date <= endDay) {
+        const dayEl = document.createElement("div");
+        dayEl.className = "day";
+        if (date.getMonth() !== month) {
+          dayEl.classList.add("outside-month");
+        }
+
+        const dateEl = document.createElement("div");
+        dateEl.className = "date";
+        dateEl.textContent = date.getDate();
+        dayEl.appendChild(dateEl);
+
+        ["AM", "PM"].forEach((slot) => {
+          const slotEl = document.createElement("div");
+          slotEl.className = "slot";
+          const key = getKey(date);
+          const isAvailable = availability[key] && availability[key][slot] === true;
+          slotEl.classList.add(isAvailable ? "available" : "unavailable");
+          slotEl.textContent = slot;
+          dayEl.appendChild(slotEl);
+        });
+
+        calendarEl.appendChild(dayEl);
+        date.setDate(date.getDate() + 1);
+      }
+    }
+
+    renderCalendar();
   </script>
 </body>
 </html>
