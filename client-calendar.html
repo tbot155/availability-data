@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Availability</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background: #f7f7f7;
+    }
+    h1, .calendar-header {
+      text-align: center;
+    }
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .day {
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .other-month {
+      background: #555;
+      color: #ccc;
+    }
+    .date-label {
+      font-weight: bold;
+    }
+    .slot {
+      margin-top: 5px;
+      padding: 5px;
+      text-align: center;
+      border-radius: 5px;
+      color: white;
+    }
+    .available {
+      background-color: #4CAF50;
+    }
+    .unavailable {
+      background-color: #999;
+    }
+    .nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .nav button {
+      margin: 0 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+    .weekdays {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      max-width: 900px;
+      margin: 0 auto 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Availability</h1>
+  <div class="calendar-header">
+    <div class="nav">
+      <button onclick="changeMonth(-1)">&laquo; Prev</button>
+      <span id="monthYear"></span>
+      <button onclick="changeMonth(1)">Next &raquo;</button>
+    </div>
+  </div>
+
+  <div class="weekdays">
+    <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+  </div>
+  <div class="calendar" id="calendar"></div>
+
+  <script>
+    let currentMonth = new Date().getMonth();
+    let currentYear = new Date().getFullYear();
+    let availability = {};
+
+    async function fetchAvailability() {
+      const res = await fetch("https://raw.githubusercontent.com/tbot155/availability-data/main/availability.json");
+      availability = await res.json();
+      renderCalendar();
+    }
+
+    function changeMonth(offset) {
+      currentMonth += offset;
+      if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+      } else if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+      }
+      renderCalendar();
+    }
+
+    function renderCalendar() {
+      const calendar = document.getElementById("calendar");
+      calendar.innerHTML = "";
+      const monthYear = document.getElementById("monthYear");
+      const date = new Date(currentYear, currentMonth);
+      const firstDay = new Date(currentYear, currentMonth, 1);
+      const lastDay = new Date(currentYear, currentMonth + 1, 0);
+      const startDay = new Date(firstDay);
+      startDay.setDate(firstDay.getDate() - firstDay.getDay());
+      const endDay = new Date(lastDay);
+      endDay.setDate(lastDay.getDate() + (6 - lastDay.getDay()));
+
+      monthYear.textContent = `${date.toLocaleString("default", { month: "long" })} ${currentYear}`;
+
+      for (let d = new Date(startDay); d <= endDay; d.setDate(d.getDate() + 1)) {
+        const dayDiv = document.createElement("div");
+        dayDiv.className = "day";
+        if (d.getMonth() !== currentMonth) {
+          dayDiv.classList.add("other-month");
+        }
+
+        const dateStr = d.toISOString().split("T")[0];
+        const dayData = availability[dateStr] || {};
+
+        const dateLabel = document.createElement("div");
+        dateLabel.className = "date-label";
+        dateLabel.textContent = d.getDate();
+        dayDiv.appendChild(dateLabel);
+
+        const morning = document.createElement("div");
+        morning.className = "slot " + (dayData.morning ? "available" : "unavailable");
+        morning.textContent = "Morning";
+
+        const evening = document.createElement("div");
+        evening.className = "slot " + (dayData.evening ? "available" : "unavailable");
+        evening.textContent = "Evening";
+
+        dayDiv.appendChild(morning);
+        dayDiv.appendChild(evening);
+
+        calendar.appendChild(dayDiv);
+      }
+    }
+
+    fetchAvailability();
+  </script>
+</body>
+</html>
