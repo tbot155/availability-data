@@ -440,8 +440,8 @@
     "evening": false
   },
   "2025-09-20": {
-    "morning": true,
-    "evening": true
+    "morning": false,
+    "evening": false
   },
   "2025-09-27": {
     "morning": false,
@@ -508,8 +508,8 @@
     "evening": true
   },
   "2025-09-21": {
-    "morning": true,
-    "evening": true
+    "morning": false,
+    "evening": false
   },
   "2025-10-02": {
     "morning": false,
