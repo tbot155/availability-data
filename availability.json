@@ -1,0 +1,126 @@
+{
+  "2025-05-01": {
+    "morning": true,
+    "evening": true
+  },
+  "2025-05-02": {
+    "morning": true,
+    "evening": true
+  },
+  "2025-05-03": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-04": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-05": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-06": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-07": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-08": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-09": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-10": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-11": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-12": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-13": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-14": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-15": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-16": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-17": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-18": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-19": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-20": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-21": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-22": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-23": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-24": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-25": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-26": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-27": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-28": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-29": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-30": {
+    "morning": false,
+    "evening": false
+  },
+  "2025-05-31": {
+    "morning": false,
+    "evening": false
+  }
+}
