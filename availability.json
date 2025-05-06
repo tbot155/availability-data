@@ -133,7 +133,7 @@
   },
   "2025-07-01": {
     "morning": false,
-    "evening": true
+    "evening": false
   },
   "2025-06-30": {
     "morning": false,
