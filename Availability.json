@@ -1,0 +1,694 @@
+{
+  "2025-05-27": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-05-28": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-05-29": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-05-30": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-05-31": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-06-02": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-06-03": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-06-04": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-06-05": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-06-06": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-06-08": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-06-09": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-06-10": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-06-11": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-06-12": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-06-13": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-06-14": {
+    "morning": "available",
+    "evening": "unavailable"
+  },
+  "2025-06-16": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-06-17": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-06-18": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-06-19": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-06-20": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-06-23": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-06-24": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-06-25": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-06-26": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-06-27": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-06-28": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-06-29": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-06-30": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-07-01": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-07-02": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-07-03": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-07-04": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-07-05": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-07-06": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-07-07": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-07-08": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-07-09": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-07-10": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-07-11": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-07-14": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-07-15": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-07-16": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-07-17": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-07-18": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-07-19": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-07-21": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-07-22": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-07-23": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-07-24": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-07-25": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-07-28": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-07-29": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-07-30": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-07-31": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-01": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-03": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-08-04": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-05": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-06": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-07": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-08": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-11": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-12": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-13": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-14": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-15": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-18": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-19": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-20": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-08-21": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-22": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-25": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-26": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-27": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-08-28": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-08-29": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-09-01": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-02": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-03": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-04": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-05": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-08": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-09": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-10": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-11": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-12": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-15": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-16": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-17": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-18": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-19": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-09-20": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-09-21": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-09-22": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-23": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-24": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-25": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-09-26": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-09-27": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-09-28": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-09-29": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-09-30": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-10-01": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-10-02": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-03": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-06": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-07": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-08": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-09": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-10": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-10-11": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-10-12": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-10-13": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-10-14": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-10-15": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-16": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-17": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-19": {
+    "morning": "unavailable",
+    "evening": "unavailable"
+  },
+  "2025-10-20": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-21": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-22": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-23": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-24": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-27": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-28": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-29": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-30": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-10-31": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-03": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-04": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-05": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-06": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-07": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-10": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-11": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-12": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-13": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-14": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-17": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-18": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-19": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-20": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-21": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-24": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-25": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-26": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-27": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-11-28": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-01": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-02": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-03": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-04": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-05": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-08": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-09": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-10": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-11": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-12": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-15": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-16": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-17": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-18": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-19": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-22": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-23": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-24": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-25": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-26": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-29": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-30": {
+    "morning": "unavailable",
+    "evening": "available"
+  },
+  "2025-12-31": {
+    "morning": "unavailable",
+    "evening": "available"
+  }
+}
