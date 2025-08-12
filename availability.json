@@ -361,7 +361,7 @@
   },
   "2025-08-24": {
     "morning": true,
-    "evening": true
+    "evening": false
   },
   "2025-08-25": {
     "morning": false,
