@@ -404,7 +404,7 @@
     "evening": true
   },
   "2025-08-31": {
-    "morning": true,
+    "morning": false,
     "evening": true
   },
   "2025-09-01": {
