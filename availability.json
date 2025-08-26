@@ -421,7 +421,7 @@
   },
   "2025-09-04": {
     "morning": false,
-    "evening": true
+    "evening": false
   },
   "2025-09-05": {
     "morning": false,
@@ -477,7 +477,7 @@
   },
   "2025-09-10": {
     "morning": false,
-    "evening": true
+    "evening": false
   },
   "2025-09-11": {
     "morning": false,
@@ -517,7 +517,7 @@
   },
   "2025-10-04": {
     "morning": false,
-    "evening": true
+    "evening": false
   },
   "2025-10-05": {
     "morning": false,
@@ -548,7 +548,7 @@
     "evening": false
   },
   "2025-10-18": {
-    "morning": true,
+    "morning": false,
     "evening": false
   },
   "2025-10-25": {
@@ -592,7 +592,7 @@
     "evening": false
   },
   "2025-10-19": {
-    "morning": true,
+    "morning": false,
     "evening": false
   },
   "2025-10-20": {
