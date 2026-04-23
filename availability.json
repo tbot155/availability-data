@@ -1293,7 +1293,7 @@
   },
   "2026-08-16": {
     "morning": true,
-    "evening": true
+    "evening": false
   },
   "2026-08-17": {
     "morning": false,
