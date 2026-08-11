@@ -1313,7 +1313,7 @@
   },
   "2026-08-21": {
     "morning": false,
-    "evening": true
+    "evening": false
   },
   "2026-08-22": {
     "morning": true,
@@ -1388,16 +1388,16 @@
     "evening": true
   },
   "2026-09-27": {
-    "morning": true,
-    "evening": true
+    "morning": false,
+    "evening": false
   },
   "2026-09-28": {
     "morning": false,
-    "evening": true
+    "evening": false
   },
   "2026-09-29": {
     "morning": false,
-    "evening": true
+    "evening": false
   },
   "2026-09-30": {
     "morning": false,
@@ -1405,7 +1405,7 @@
   },
   "2026-10-01": {
     "morning": false,
-    "evening": true
+    "evening": false
   },
   "2026-10-02": {
     "morning": false,
@@ -1416,8 +1416,8 @@
     "evening": true
   },
   "2026-09-26": {
-    "morning": true,
-    "evening": true
+    "morning": false,
+    "evening": false
   },
   "2026-09-19": {
     "morning": true,
