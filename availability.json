@@ -1321,7 +1321,7 @@
   },
   "2026-08-29": {
     "morning": true,
-    "evening": true
+    "evening": false
   },
   "2026-08-28": {
     "morning": false,
@@ -1349,7 +1349,7 @@
   },
   "2026-08-30": {
     "morning": true,
-    "evening": true
+    "evening": false
   },
   "2026-08-31": {
     "morning": false,
