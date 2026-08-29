@@ -1369,7 +1369,7 @@
   },
   "2026-09-04": {
     "morning": false,
-    "evening": true
+    "evening": false
   },
   "2026-09-05": {
     "morning": true,
